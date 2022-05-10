@@ -1,4 +1,4 @@
-# Arduino Impulse Meter
+# Arduino Impulse Utility Meter
 
 ## A digital meter for impulse signal style gas or water meters
 
