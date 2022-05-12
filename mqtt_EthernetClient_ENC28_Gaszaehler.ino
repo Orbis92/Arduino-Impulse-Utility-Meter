@@ -141,7 +141,7 @@ void loop() {
     Serial.print(".");
     MQTTPacket_connectData options = MQTTPacket_connectData_initializer;
     options.username.cstring = (char*)"mqtt-user";    //Login  to your MQTT broker
-    options.password.cstring = (char*)"h0m3455mqtt";
+    options.password.cstring = (char*)"password";
     options.MQTTVersion = 4;
     options.clientID.cstring = (char*)MQTT_ID;
     options.cleansession = true;
