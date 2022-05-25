@@ -227,9 +227,7 @@ void loop() {
       sendTmr = currentTime;                          
       
       publishCounter();
-    } else if(sendTmr > currentTime) sendTmr = currentTime;  //millis() overflowed  (after approx 50days)   
-
-
+    } 
 
 		// Idle 500ms
 		mqtt->yield(500L);
@@ -240,7 +238,7 @@ void loop() {
 //=======================- interrupt routine =================================
 void ISRsensor() {
   unsigned long time = millis();
-  if((debounceTmr + 200 <= time) || (debounceTmr > time)) {    // debounce timer || millis() overflowed (after approx 50days) 
+  if(debounceTmr + 200 <= time)  {    // debounce timer
     debounceTmr = time;
     
     counter++;  
